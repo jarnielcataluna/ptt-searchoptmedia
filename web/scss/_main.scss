@@ -363,6 +363,7 @@
 	text-align: center;
 	z-index: 10;
 	background: $coLightBlue;
+	min-height: 400px;
 
 	@include breakpoint(phablet) {
 		height: auto;
@@ -498,6 +499,10 @@
 .news-cont-wrap {
 	position: relative;
 
+	@include breakpoint(tablet) {
+		margin-bottom: 15px;
+	}
+
 }
 
 .nw-img {
@@ -574,7 +579,9 @@
 
 .other-feature {
 	margin-top: 32px;	
-	padding: 0px 15px;
+	padding: 20px 15px;
+	max-width: 700px;
+	margin: 0 auto;
 
 	@include breakpoint(tablet2) {
 		padding-bottom: 30px;
@@ -607,6 +614,7 @@
 
 		@include breakpoint(tablet) {
 			display: block;
+			padding-top: 10px;
 
 
 			.nw-text {
@@ -898,17 +906,6 @@
 	}
 }
 
-.promo-text {
-	padding: 0 15px 25px;
-	text-align: left;
-
-	h3 {
-		color: $coLightBlue;
-		font-size: 32px;
-	}
-}
-
-
 .partners-list {
 	text-align: center;
 
@@ -935,6 +932,21 @@
 }
 
 
+.tablet2-clear {
+	clear: both;
+	float: none;
+	display: none;
 
+	@include breakpoint(tablet) {
+		display: block;
+		margin-top: 15px;
+	}
+}
+
+.hide-in-mobile {
+	@include breakpoint(tablet2) {
+		display: none;
+	}
+}
 
 

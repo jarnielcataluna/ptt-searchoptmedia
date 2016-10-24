@@ -1,16 +1,29 @@
 // ionclude all your related style here in the header, you can leave it empty if the page has no header
-html, body { height:100%; min-height:100%; }
+body { height:100%; min-height:100%; }
 .hide { position:relative;}
 .ease,a,input[type="submit"],button { @include transition(all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)); }
 .loader { position:relative; overflow:hidden; background:#fff url('../images/page_template/loading.gif') no-repeat center; }
 .auto { max-width:$maxWidth; margin: 0 auto; }
-#main-container { height:100%; height: auto !important; min-height:100%; }
+#main-container { 
+	height:100%; 
+	height: auto !important; 
+	min-height:100%; 
+	position: relative; 
+	top: -306px; 
+	@include transition(all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)); 
+
+	@include breakpoint(tablet2) {
+		top: 0;
+	}
+}
+#main-container.slide-down {
+	top: 0;
+}
 header {
 	background: transparent;
 	position: fixed;
 	width: 100%;
 	z-index: 1001;
-	top: 0;
 	left: 0;
 	@include transform(translate(0, -100%));
 	-webkit-backface-visibility: hidden;
@@ -18,15 +31,23 @@ header {
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0);
 	opacity: 0;
 
+	&.adjusted {
+		top: 0;
+		position: absolute;
+		@include transition( all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+	}
+
 	&.is-animated {
 		opacity: 1;
 		@include transform(translate(0, 0));
 		@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
 	}
 
-	&.is-fixed, &.header-white {
+	&.is-fixed {
+		position: fixed;
 		background: rgba($coWhite, 0.9);
 		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+		top: 0;
 
 		.header-wrapper {
 			border-bottom: 1px solid transparent;
@@ -79,6 +100,17 @@ header {
 			button {
 				color: $coBlue;
 			}
+		}
+	}
+
+	&.header-white {
+		background: rgba($coWhite, 0.9);
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+		top: 0;
+		position: absolute;
+
+		&.is-fixed {
+			position: fixed;
 		}
 	}
 
@@ -264,6 +296,248 @@ header {
 	}
 }
 
+.promo-head {
+	background: #f23222;
+	color: #fff;
+	font-weight: 700;
+	padding: 10px 0;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+
+	@include breakpoint(tablet2) {
+		position: fixed;
+		bottom: 0;
+		top: inherit;
+		padding: 0 0 5px 0;
+		z-index: 999;
+	}
+
+	.container {
+		position: relative;
+		xmax-width: 1100px;
+	}
+
+	.ppl-item {
+		background: rgba(0, 0, 0, 0.2);
+		padding: 8px;
+		min-width: 240px;
+		max-width: 240px;
+
+		@include breakpoint(tablet) {
+			min-width: 100%;
+		}
+
+		p {
+			font-size: 16px;
+
+			@include breakpoint(tablet2) {
+				font-size: 14px;
+			}
+		}
+
+		span {
+			font-size: 35px;
+			text-align: right;
+			display: block;
+
+			@include breakpoint(tablet2) {
+				font-size: 20px;
+			}
+		}
+	}
+
+	.promo-h-title {
+
+		padding-bottom: 10px;
+		border-bottom: 1px solid $coWhite;
+		margin-bottom: 15px;
+
+		@include breakpoint(tablet2) {
+			display: none;
+		}
+	}
+}
+
+.prh-close {
+	padding: 5px 0px 12px 10px;
+	color: $coWhite;
+	text-transform: uppercase;
+	font-size: 14px;
+	text-align: right;
+	display: inline-block;
+	position: absolute;
+	bottom: -10px;
+	right: 15px;
+	background: #f23222;
+	@include transition(background 0s 0.1s ease);
+
+	.prh-is-close {
+		display: inline-block;
+		margin-right: 0;
+
+		@include breakpoint(tablet2) {
+			padding-right: 10px;
+		}
+	}
+
+	.prh-is-open {
+		display: none;
+	}
+
+	&.is-active {
+		background: $coLightBlue;
+		padding: 5px 0px 5px 10px;
+		
+		@include transition(background 0.4s 0.3s ease);
+
+		.prh-is-close {
+			display: none;
+		}
+
+		.prh-is-open {
+			display: inline-block;
+		}
+	}
+
+	span {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		text-align: right;
+	}
+
+	img {
+		max-width: 90%;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+	}
+}
+
+
+.promo-text {
+	padding: 0 15px 25px;
+	text-align: left;
+
+	h3 {
+		color: $coLightBlue;
+		font-size: 32px;
+	}
+}
+
+.promo-h-small {
+	padding-right: 220px;
+	width: auto;
+	@include transition(all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+	opacity: 1;
+	visibility: visible;
+
+	@include breakpoint(tablet2) {
+		padding-right: 0;
+		opacity: 1;
+		visibility: visible;
+		font-size: 12px;
+		display: none;
+	}
+
+	&.is-open {
+		visibility: hidden;
+		opacity: 0;
+
+		@include breakpoint(tablet2) {
+			padding-right: 0;
+			opacity: 1;
+			visibility: visible;
+			display: none;
+		}
+	}
+
+	p {
+		font-weight: 400;
+
+		.prm-button {
+			display: inline-block;
+			margin-left: 30px;	
+			color: $coWhite;
+
+			&:hover {
+
+				.fa {
+					left: 5px;
+				}
+			}
+
+			.fa {
+				display: inline-block;
+				position: relative;
+				margin-left: 8px;
+				top: 0.5px;
+				left: 0;
+				@include transition(all 0.3s ease);
+			}
+		}
+	}
+}
+
+.promo-content {
+	padding: 0px 0 5px;
+
+}
+
+.promo-h-right {
+	padding-left: 40px;
+
+	.ph-r-img-holder {
+		width: 100%;
+		min-height: 152px;
+		background: $coWhite;
+
+		@include breakpoint(tablet2) {
+			display: none;
+		}
+	}
+}
+
+.promo-price-list {
+	margin: 0px -10px;
+
+	@include breakpoint(tablet2) {
+		padding-top: 10px;
+	}
+
+	&:after {
+		content:'';
+		display: block;
+		float: none;
+		clear: both;
+	}
+
+	li {
+		width: 50%;
+		float: left;
+		padding: 0px 10px 10px;
+
+		@include breakpoint(tablet2) {
+			padding: 5px 5px 5px;
+		}
+
+		&:nth-child(even) {
+			float: right;
+
+			.ppl-item {
+				float: right;
+			}
+		}
+
+
+
+	}
+}
+
 
 .header-hamburger {
 	display: none;
@@ -285,6 +559,7 @@ header {
 
 	@include breakpoint(tablet2) {
 		margin-top: 15px;
+
 	}
 }
 

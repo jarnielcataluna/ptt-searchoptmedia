@@ -188,6 +188,7 @@ footer {
 	overflow: hidden;
 	border: 1px solid #ccc;
 	position: relative;
+	-webkit-backface-visibility: hidden;
 
 	&:before {
 		content:'';
