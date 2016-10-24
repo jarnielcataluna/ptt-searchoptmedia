@@ -1,0 +1,334 @@
+// ionclude all your related style here in the header, you can leave it empty if the page has no header
+html, body { height:100%; min-height:100%; }
+.hide { position:relative;}
+.ease,a,input[type="submit"],button { @include transition(all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1)); }
+.loader { position:relative; overflow:hidden; background:#fff url('../images/page_template/loading.gif') no-repeat center; }
+.auto { max-width:$maxWidth; margin: 0 auto; }
+#main-container { height:100%; height: auto !important; min-height:100%; }
+header {
+	background: transparent;
+	position: fixed;
+	width: 100%;
+	z-index: 1001;
+	top: 0;
+	left: 0;
+	@include transform(translate(0, -100%));
+	-webkit-backface-visibility: hidden;
+	@include transition( all 0.3s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0);
+	opacity: 0;
+
+	&.is-animated {
+		opacity: 1;
+		@include transform(translate(0, 0));
+		@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+	}
+
+	&.is-fixed, &.header-white {
+		background: rgba($coWhite, 0.9);
+		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+
+		.header-wrapper {
+			border-bottom: 1px solid transparent;
+			padding-bottom: 0;
+		}
+
+		.menu > ul > li a {
+			color: $coBlue;
+		}
+
+		.menu > ul > li a:hover {
+			background: none;
+			color: $coDarkBlue;
+		}
+
+		.helper-wrap {
+			padding-bottom: 0;
+		}
+
+		.helper-btn {
+			color: $coBlue;
+			border: 1px solid $coBlue;
+
+			&:hover {
+				color: $coWhite;
+				border: 1px solid $coLightBlue;
+			}
+		}
+
+		.search-field {
+
+			input[type="text"] {
+				border: 1px solid $coBlue;
+
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: $coBlue;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+				  color: $coBlue;
+				}
+				&:-ms-input-placeholder { /* IE 10+ */
+				  color: $coBlue;
+				}
+				&:-moz-placeholder { /* Firefox 18- */
+				  color: $coBlue;
+				}
+
+			}
+
+			button {
+				color: $coBlue;
+			}
+		}
+	}
+
+	.container {
+		max-width: 1100px;
+	}
+
+}
+
+.header-wrapper {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c9d4dc;
+	@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+}
+
+.logo {
+	width: 150px;
+	padding: 0 12px;
+	margin-top: 20px;
+	float: left;
+
+	@include breakpoint(tablet) {
+		padding: 12px;
+		margin-top: 0;
+	}
+
+	@include breakpoint(tablet2) {
+		padding: 8px 0;
+		width: 100px;
+	}
+
+	a {
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+}
+
+
+.menu {
+	margin-right: -10px;
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+	
+
+	> ul {
+
+		> li {
+			display: inline-block;
+			
+
+			a {
+				font-size: 14px;
+				color: $coWhite;
+				font-family: $fontA;
+				font-weight: 700;
+				position: relative;
+				background: transparent;
+				padding: 6px 12px;
+				display: block;
+				border-radius: 4px;
+
+				@include breakpoint(desktop-large) {
+					padding: 6px 8px;
+					font-size: 13px;
+				}
+
+				&:hover {
+					background: $coLightBlue;
+
+					/*&:before {
+						@include transform(scale(1));
+						opacity: 1;
+					}*/
+				}
+
+				/*&:before {
+					content:'';
+					display: block;
+					position: absolute;
+					height: 3px;
+					width: 100%;
+					bottom: -6px;
+					left: 0;
+					background: $coLightBlue;
+					@include transition(all 0.4s ease);
+					@include transform(scale(0));
+					opacity: 0;
+				}*/
+			}
+		}
+	}
+}
+
+.helper-wrap {
+	padding: 10px 0 5px;
+	@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+	@include breakpoint(tablet) {
+		display: none;
+	}
+}
+
+.helper-btn {
+
+	color: $coWhite;
+	padding-left: 45px;
+	padding-right: 25px;
+	line-height: 35px;
+	display: inline-block;
+	border-radius: 6px;
+	position: relative;
+	overflow: hidden;
+	font-size: 14px;
+	margin-left: 8px;
+	border: 1px solid $coWhite;
+	font-weight: 700;
+	letter-spacing: 0.25px;
+
+	&:hover {
+		background: #00adef;
+		border: 1px solid #00adef;
+	}
+
+	span {	
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 24px;
+		width: 35px;
+		text-align: center;
+		@include transition( 0s cubic-bezier(0.645, 0.045, 0.355, 1));
+	}
+}
+
+.search-field {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0px 0 0px 15px;
+
+	input[type="text"] {
+
+		background: transparent;
+		border: 1px solid $coWhite;
+		border-radius: 6px;
+		padding: 8px 10px 8px 10px;
+		color: $coWhite;
+		@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: $coWhite;
+		  @include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: $coWhite;
+		  @include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: $coWhite;
+		  @include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: $coWhite;
+		  @include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+		}
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		color: $coWhite;
+		font-size: 18px;
+		background: transparent;
+		border: none;
+		height: 36px;
+		z-index: 2;
+		@include transition( all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1));
+	}
+}
+
+
+.header-hamburger {
+	display: none;
+	float: right;
+	position: relative;
+	cursor: pointer;
+	z-index: 101;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	background-color: transparent;
+	margin: 25px 0 10px 15px;
+	right:0; 
+	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+	@include breakpoint(tablet) {
+		display: block;
+	}
+
+	@include breakpoint(tablet2) {
+		margin-top: 15px;
+	}
+}
+
+.header-hamburger span, .header-hamburger span:after, .header-hamburger span:before {
+	content: '';
+	cursor: pointer;
+	height: 2px;
+	width: 25px;
+	background: $coBlue;
+	position: absolute;
+	display: block;
+	@include transition(all 0.2s ease-in-out);
+	@include transform(rotate(0deg));
+}
+
+.header-hamburger span {
+	  right: 0px;
+	  top: 12px;
+}
+
+.header-hamburger span:before {
+  	top: -7px;
+}
+
+.header-hamburger span:after {
+  	top: 7px;
+}
+
+.header-hamburger.active span {
+  	background: transparent !important;
+}
+
+.header-hamburger.active span:before, .header-hamburger.active span:after {
+  	top: 0;
+}
+
+.header-hamburger.active span:before {
+  	@include transform(rotate(45deg));
+}
+
+.header-hamburger.active span:after {
+ 	@include transform(rotate(-45deg));
+}
+
+
+
+
