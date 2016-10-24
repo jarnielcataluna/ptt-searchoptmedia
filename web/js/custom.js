@@ -111,6 +111,25 @@ $(window).load(function() {
 	    smoothHeight: true
 
 	});
+
+	$('.prh-close').click(function(){
+		//$('#main-container').removeClass('slide-down');
+
+		if($(this).hasClass('is-active')) {
+			setTimeout(function(){
+				$('header').toggleClass('adjusted');
+			}, 400);
+		} else {
+			$('header').toggleClass('adjusted');
+		}
+
+		$(this).toggleClass('is-active');
+		$('.promo-content').stop(true, false).slideToggle(300);
+		$('.promo-h-small').toggleClass('is-open');
+
+
+		
+	});
 });
 
 // preloader once done
@@ -118,18 +137,29 @@ Pace.on('done', function() {
 	// totally hide the preloader especially for IE
 	setTimeout(function() {
 		$('.pace-inactive').hide();
+		$('#main-container').addClass('slide-down').css({'position' : 'relative'});
 	}, 500);
 });
 
 $(window).on('scroll load', function(){
 
     var _cur_top = $(window).scrollTop();
-	if(  _cur_top >=  50) {
-		$('header').addClass('is-fixed');
 
-	} else {
-		$('header').removeClass('is-fixed');
-	}
+    if($('header').hasClass('adjusted')) {
+    	if(  _cur_top >=  306) {
+			$('header').addClass('is-fixed');
+		} else {
+			$('header').removeClass('is-fixed');
+		}
+    } else {
+    	if(  _cur_top >=  40) {
+			$('header').addClass('is-fixed');
+
+		} else {
+			$('header').removeClass('is-fixed');
+		}
+    }
+	
 
 });
 
