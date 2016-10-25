@@ -129,7 +129,7 @@
 			<div class="table-wrap">
 				<div class="table-cell">
 					<div class="container">
-						<h1 class="animated hiding" data-animation="fadeInUp">Add Your Unique Value <br>Proposition Here</h1>
+						<h1 class="animated hiding" data-animation="fadeInUp">The Power <br>To Make Better</h1>
 						<a class="btn animated hiding" data-animation="fadeInUp" href="">Learn More</a>
 					</div>
 				</div>
@@ -145,7 +145,7 @@
 								<div class="news-cont-wrap">
 									<div class="nw-img"><a href="#"><img src="images/home/news1.jpg" alt=""></a></div>
 									<div class="nw-text par">
-										<h2>Very Important News Here</h2>
+										<h2>Petroleum Powerhouse PTT Launches Brand New Website</h2>
 										<p>Maecenas congue vestibulum nulla, vitae fringilla turpis tempor at. Nunc maximus odio ac diam consequat lobortis. Maecenas non nisl quis lectus egestas rutrum. Donec a diam mauris. Nulla placerat eleifend eros, et gravida mi interdum quis. Aliquam ut ipsum eu risus laoreet blandit efficitur non orci. </p>
 										<a href="#" class="cta-action"> Read the News  <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 									</div>
@@ -181,11 +181,11 @@
 				<div class="other-feature">
 					<div class="news-cont-wrap">
 						<div class="nw-text show-mobile par">
-							<h2>Very Important News</h2>
+							<h2>Petroleum Powerhouse PTT Launches Brand New Website</h2>
 						</div>
 						<div class="nw-img"><a href="#"><img src="images/home/news1.jpg" alt=""></a></div>
 						<div class="nw-text par">
-							<h2 class="hide-in-mobile">Very Important News</h2>
+							<h2 class="hide-in-mobile">Petroleum Powerhouse PTT Launches Brand New Website</h2>
 							<p>Maecenas congue vestibulum nulla, vitae fringilla turpis tempor at. Nunc maximus odio ac diam consequat lobortis. Maecenas non nisl quis lectus egestas rutrum. Donec a diam mauris. Nulla placerat eleifend eros, et gravida mi interdum quis. Aliquam ut ipsum eu risus laoreet blandit efficitur non orci. </p>
 							<a href="#" class="cta-action"> Read the News  <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 						</div>

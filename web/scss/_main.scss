@@ -385,17 +385,15 @@
 		}
 
 		@include breakpoint(phablet) {
-			font-size: 32px;
-			line-height: 40px;
+			font-size: 46px;
+			line-height: 50px;
 		}
 
 		@include breakpoint(mobile) {
-			font-size: 26px;
-			line-height: 34px;
+			font-size: 38px;
+			line-height: 42px;
 
-			br {
-				display: none;
-			}
+			
 		}
 	}
 
@@ -533,9 +531,9 @@
 
 	h2 {
 		font-size: 34px;
-		text-transform: uppercase;
-		margin-top: 20px;
-		line-height: 40px;
+		xtext-transform: uppercase;
+		margin-top: 5px;
+		line-height: 36px;
 
 		@include breakpoint(desktop) {
 			font-size: 28px;
