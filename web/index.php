@@ -260,7 +260,7 @@
 		<section class="promo-wrap sec-pad">
 			<div class="container">
 				<div class="text-center">
-					<h2 class="sec-title animated hiding" data-animation="fadeInUp"> Our Promos</h2>
+					<h2 class="sec-title animated hiding" data-animation="fadeInUp"> Other Promos</h2>
 				</div>
 				<ul class="promo-list">
 					<li class="animated hiding" data-animation="fadeInUp">
