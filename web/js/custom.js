@@ -116,9 +116,9 @@ $(window).load(function() {
 
 	});
 
-	$('.prh-close').click(function(){
+	$('.prh-close').click(function(e){
 		//$('#main-container').removeClass('slide-down');
-
+		e.preventDefault();
 		if($(this).hasClass('is-active')) {
 			setTimeout(function(){
 				$('header').toggleClass('adjusted');
