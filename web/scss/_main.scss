@@ -363,11 +363,12 @@
 	text-align: center;
 	z-index: 10;
 	background: $coLightBlue;
-	min-height: 400px;
+	min-height: 550px;
 
 	@include breakpoint(phablet) {
 		height: auto;
 		max-height: 400px;
+		min-height: 380px;
 	}
 
 	h1 {

@@ -104,6 +104,10 @@ $(window).load(function() {
 		$('header').addClass('is-animated');
 	}, 300);
 
+	setTimeout(function(){
+		$('#main-container').addClass('slide-down').css({'position' : 'relative'});
+	}, 800);
+
 	$('.feature-news .flexslider').flexslider({
 	    animation: "fade",
 	    controlNav: true,
@@ -137,7 +141,7 @@ Pace.on('done', function() {
 	// totally hide the preloader especially for IE
 	setTimeout(function() {
 		$('.pace-inactive').hide();
-		$('#main-container').addClass('slide-down').css({'position' : 'relative'});
+		
 	}, 500);
 });
 

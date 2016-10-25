@@ -106,8 +106,13 @@ header {
 	&.header-white {
 		background: rgba($coWhite, 0.9);
 		box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-		top: 0;
+		top: 0 !important;
 		position: absolute;
+		-webkit-backface-visibility: hidden;
+
+		@include breakpoint(tablet2) {
+			position: fixed !important;
+		}
 
 		&.is-fixed {
 			position: fixed;
@@ -407,6 +412,7 @@ header {
 		vertical-align: middle;
 		margin-right: 10px;
 		text-align: right;
+		line-height: 19px;
 	}
 
 	img {
@@ -414,7 +420,7 @@ header {
 		display: inline-block;
 		vertical-align: middle;
 		position: relative;
-		top: -1px;
+		top: -2px;
 	}
 }
 

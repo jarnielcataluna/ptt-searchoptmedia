@@ -23110,8 +23110,15 @@ header.is-fixed .search-field button {
 header.header-white {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-  top: 0;
+  top: 0 !important;
   position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  header.header-white {
+    position: fixed !important;
+  }
 }
 
 header.header-white.is-fixed {
@@ -23468,6 +23475,7 @@ header .container {
   vertical-align: middle;
   margin-right: 10px;
   text-align: right;
+  line-height: 19px;
 }
 
 .prh-close img {
@@ -23475,7 +23483,7 @@ header .container {
   display: inline-block;
   vertical-align: middle;
   position: relative;
-  top: -1px;
+  top: -2px;
 }
 
 .promo-text {
@@ -26559,13 +26567,14 @@ footer p a:hover {
   text-align: center;
   z-index: 10;
   background: #33b8e8;
-  min-height: 400px;
+  min-height: 550px;
 }
 
 @media (max-width: 640px) {
   .banner-wrap {
     height: auto;
     max-height: 400px;
+    min-height: 380px;
   }
 }
 
