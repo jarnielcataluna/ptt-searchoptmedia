@@ -22,6 +22,7 @@
 </head>
 <body>
 
+<!-- 
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -29,7 +30,7 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script> -->
 
 <div class="promo-head">
 	<div class="container">
@@ -209,7 +210,8 @@
 							<img src="images/home/twitter.png" alt="" style="max-width:100%;">
 						</div>
 						<div class="col-md-4 col-sm-6 text-center hide-in-mobile">
-							<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="300" data-height="320"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+							<!-- <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-width="300" data-height="320"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div> -->
+							<img src="images/home/fb-widgets.png" style="max-width: 100%;" alt="">
 						</div>
 						<!-- <div class="col-md-4 col-sm-6 fr animated hiding" data-animation="fadeInUp">
 							<div class="subscribe-letter">
