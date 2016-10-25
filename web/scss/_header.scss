@@ -81,6 +81,7 @@ header {
 
 			input[type="text"] {
 				border: 1px solid $coBlue;
+				color: $coBlue;
 
 				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				  color: $coBlue;

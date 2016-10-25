@@ -23084,6 +23084,7 @@ header.is-fixed .helper-btn:hover {
 
 header.is-fixed .search-field input[type="text"] {
   border: 1px solid #1c75bc;
+  color: #1c75bc;
 }
 
 header.is-fixed .search-field input[type="text"]::-webkit-input-placeholder {
@@ -26283,6 +26284,7 @@ footer p a:hover {
 
 .input-wrap {
   position: relative;
+  z-index: 99;
 }
 
 .btn {
