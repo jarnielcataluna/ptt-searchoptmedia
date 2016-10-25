@@ -581,7 +581,6 @@
 .other-feature {
 	margin-top: 32px;	
 	padding: 20px 15px;
-	max-width: 700px;
 	margin: 0 auto;
 
 	@include breakpoint(tablet2) {
@@ -620,7 +619,8 @@
 
 			.nw-text {
 				padding: 0px 20px;
-				min-height: auto;
+				min-height: 10px;
+				height: auto;
 
 				@include breakpoint(phablet) {
 					float: none;

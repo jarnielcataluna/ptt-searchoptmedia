@@ -2943,12 +2943,14 @@ html, body {
   -ms-text-size-adjust: 100%;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 body {
   font-size: 16px;
   line-height: 1.4;
   color: #000000;
+  outline: none;
 }
 
 /*
@@ -22951,6 +22953,7 @@ span,
 body {
   height: 100%;
   min-height: 100%;
+  outline: none;
 }
 
 .hide {
@@ -23347,7 +23350,7 @@ header .container {
 }
 
 .promo-head {
-  background: #f23222;
+  background: #ff6644;
   color: #fff;
   font-weight: 700;
   padding: 10px 0;
@@ -23373,7 +23376,7 @@ header .container {
 }
 
 .promo-head .ppl-item {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.15);
   padding: 8px;
   min-width: 240px;
   max-width: 240px;
@@ -23429,7 +23432,7 @@ header .container {
   position: absolute;
   bottom: -10px;
   right: 15px;
-  background: #f23222;
+  background: #ff6644;
   -webkit-transition: background 0s 0.1s ease;
   -moz-transition: background 0s 0.1s ease;
   -ms-transition: background 0s 0.1s ease;
@@ -26802,7 +26805,6 @@ footer p a:hover {
 .other-feature {
   margin-top: 32px;
   padding: 20px 15px;
-  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -26847,7 +26849,8 @@ footer p a:hover {
   }
   .other-feature .news-cont-wrap .nw-text {
     padding: 0px 20px;
-    min-height: auto;
+    min-height: 10px;
+    height: auto;
   }
 }
 
